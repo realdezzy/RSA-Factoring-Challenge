@@ -8,11 +8,11 @@ void factor(char *arg)
 
 	sqroot = ceil(sqrt((double)fact));
 
-	for (int i = 2; i <= sqroot; i++)
+	for (int i = 3; i <= sqroot; i += 2)
 	{
 		if (fact % i == 0)
 		{
-			printf("%li = %d x %li\n", fact, i, (fact/i));
+			printf("%li = %li x %d\n", fact, (fact/i), i);
 			break;
 		}
 	}
